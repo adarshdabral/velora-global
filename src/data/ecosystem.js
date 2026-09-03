@@ -1,0 +1,105 @@
+// The eight pillars of the Velora ecosystem, as presented in "The Vision of Velora Global".
+export const ecosystemNodes = [
+  {
+    id: "broker-house",
+    productId: "broker-house",
+    label: "Broker House",
+    icon: "Landmark",
+    blurb: "World-class brokerage solutions with trust, transparency & technology.",
+    status: "revealing-soon",
+  },
+  {
+    id: "forex-cards",
+    productId: "forex-cards",
+    label: "Forex Card & Utility App",
+    icon: "CreditCard",
+    blurb: "Smart global payments and seamless financial management on the go.",
+    status: "coming-soon",
+  },
+  {
+    id: "crypto-arbitrage",
+    productId: "crypto-arbitrage",
+    label: "Crypto Arbitrage Platform",
+    icon: "Bitcoin",
+    blurb: "AI-powered arbitrage opportunities across global crypto markets.",
+    status: "revealing-soon",
+  },
+  {
+    id: "prop-fund",
+    productId: "prop-firm",
+    label: "Funded Prop Firm",
+    icon: "ShieldCheck",
+    blurb: "Empowering traders with capital, advanced tools, and growth opportunities.",
+    status: "coming-soon",
+  },
+  {
+    id: "platform",
+    productId: null,
+    label: "Platform of Velora",
+    icon: "Infinity",
+    blurb: "All-in-one ecosystem platform to trade, manage, connect and grow — everything in one place.",
+    status: "in-development",
+  },
+  {
+    id: "strategies-market",
+    productId: null,
+    label: "Live Strategies Market",
+    icon: "LineChart",
+    blurb: "Explore, subscribe & follow proven strategies from top performing traders.",
+    status: "in-development",
+  },
+  {
+    id: "ai-agent",
+    productId: "ai-agent",
+    label: "AI Agent",
+    icon: "BrainCircuit",
+    blurb: "Your intelligent trading assistant for smarter decisions & risk management.",
+    status: "in-development",
+  },
+  {
+    id: "fund-management",
+    productId: "fund-management",
+    label: "Fund Management",
+    icon: "Vault",
+    blurb: "Professional fund management for consistent growth.",
+    status: "coming-soon",
+  },
+];
+
+export const marketStats = [
+  {
+    id: "forex",
+    label: "Forex Market",
+    tag: "The World's Largest Market",
+    value: "$9.6",
+    unit: "Trillion+",
+    sub: "Daily Volume",
+    icon: "Globe2",
+  },
+  {
+    id: "gold",
+    label: "XAUUSD (Gold) Market",
+    tag: "A Timeless Safe Haven",
+    value: "$361",
+    unit: "Billion+",
+    sub: "Daily Volume",
+    icon: "Landmark",
+  },
+  {
+    id: "crypto",
+    label: "Crypto Market",
+    tag: "The Future of Finance",
+    value: "$18.7",
+    unit: "Trillion+",
+    sub: "Daily Volume",
+    icon: "Bitcoin",
+  },
+];
+
+export const pillars = [
+  { label: "Trust & Transparency", blurb: "Clear policies and complete transparency.", icon: "ShieldCheck" },
+  { label: "Global Community", blurb: "Uniting traders, leaders & partners worldwide.", icon: "Users" },
+  { label: "Innovative Technology", blurb: "Advanced tools & platforms for smarter trading.", icon: "Cpu" },
+  { label: "Strong Partnerships", blurb: "Working with top-tier liquidity providers worldwide.", icon: "Handshake" },
+  { label: "Endless Opportunities", blurb: "Forex, Gold, Crypto, Indices & beyond — all in one ecosystem.", icon: "Infinity" },
+];
