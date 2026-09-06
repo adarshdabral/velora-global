@@ -19,10 +19,10 @@ export const ecosystemNodes = [
   {
     id: "crypto-arbitrage",
     productId: "crypto-arbitrage",
-    label: "Crypto Arbitrage Platform",
+    label: "Velswap",
     icon: "Bitcoin",
-    blurb: "AI-powered arbitrage opportunities across global crypto markets.",
-    status: "revealing-soon",
+    blurb: "A cross-chain flash loan liquidity protocol — borrow any pool, settle in the same block.",
+    status: "live",
   },
   {
     id: "prop-fund",

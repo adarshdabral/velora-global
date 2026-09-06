@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import BrokerHouse from "./products/BrokerHouse";
 import PropFund from "./products/PropFund";
-import CryptoArbitrage from "./products/CryptoArbitrage";
+import Velswap from "./products/Velswap";
 import AIAgent from "./products/AIAgent";
 import Education from "./products/Education";
 import ForexCards from "./products/ForexCards";
@@ -28,7 +28,7 @@ export default function ProductUniverse() {
 
       <BrokerHouse />
       <PropFund />
-      <CryptoArbitrage />
+      <Velswap />
       <AIAgent />
       <Education />
       <ForexCards />

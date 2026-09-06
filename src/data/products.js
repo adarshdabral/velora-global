@@ -100,6 +100,19 @@ export const automationBotFeatures = [
   { title: "Exclusive for Top Leaders", blurb: "Available for top leaders with higher levels and minimum requirements for a premium trading experience.", icon: "Crown" },
 ];
 
+export const velswapFeatures = [
+  { title: "Deposit & Earn", blurb: "Supply a pool's principal and accrue a pro-rata share of every fee it collects, paid out automatically on deposit or withdrawal.", icon: "Wallet" },
+  { title: "Isolated Flash Loans", blurb: "Borrow up to a pool's full balance for a single transaction — loan, trade and repayment settle atomically, or none of it happens.", icon: "Zap" },
+  { title: "Capped Fee Split", blurb: "Every fee splits between the protocol and depositors, with the protocol's cut hard-capped on-chain — the rest always flows to LPs.", icon: "Percent" },
+  { title: "Full On-Chain Transparency", blurb: "Every deposit, withdrawal and loan is emitted as a public, indexable event — nothing settles off-chain.", icon: "Eye" },
+];
+
+export const velswapPools = [
+  { asset: "USDC", tvl: "$1.9M", rate: "0.30%" },
+  { asset: "DAI", tvl: "$954K", rate: "0.20%" },
+  { asset: "USDT", tvl: "$640K", rate: "0.45%" },
+];
+
 // Full-screen product universe sequence
 export const products = [
   {
@@ -133,16 +146,17 @@ export const products = [
   {
     id: "crypto-arbitrage",
     number: "03",
-    eyebrow: "Something Big Is Coming",
-    title: "Crypto\nArbitrage",
-    tagline: "The Future of Arbitrage Is Almost Here.",
-    status: "Revealing Soon",
-    theme: "mystery",
+    eyebrow: "Introducing",
+    title: "Velswap",
+    tagline: "Borrow any pool. Settle same block.",
+    status: "Live",
+    theme: "dark",
     accent: "from-violet-500 to-fuchsia-500",
     description:
-      "An AI-powered arbitrage platform built to uncover opportunities across global crypto markets. The details remain sealed — for now.",
-    closing: "Stay tuned. Stay ahead.",
-    image: "crypto-crate",
+      "Velora's cross-chain flash loan liquidity protocol. Each pool holds a single asset, lends against it within one atomic transaction, and pays depositors a pro-rata share of every fee it collects — non-custodial, on-chain, and fully auditable.",
+    closing: "No hidden fees. Non-custodial. Multi-chain.",
+    image: null,
+    externalUrl: "https://velswap.vercel.app",
   },
   {
     id: "ai-agent",

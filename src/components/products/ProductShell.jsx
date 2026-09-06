@@ -1,10 +1,9 @@
 import { motion } from "motion/react";
-import { ChevronUp, ChevronDown } from "lucide-react";
+import { ChevronUp, ChevronDown, ArrowUpRight } from "lucide-react";
 import { products } from "../../data/products";
 
 const THEME_BG = {
   dark: "bg-[#05050a] text-white",
-  mystery: "bg-[#050308] text-white",
   light: "bg-gradient-to-b from-white to-[#eef2ff] text-slate-900",
 };
 
@@ -119,6 +118,7 @@ export default function ProductShell({
   visual,
   features,
   showClosing = true,
+  cta,
   contentClassName = "",
 }) {
   const theme = THEME_BG[product.theme] ?? THEME_BG.dark;
@@ -226,6 +226,25 @@ export default function ProductShell({
             >
               “{product.closing}”
             </motion.p>
+          )}
+
+          {cta && (
+            <motion.a
+              href={cta.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cursor="cta"
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6, duration: 0.6 }}
+              className={`mt-8 inline-flex items-center gap-2 rounded-full px-6 py-3 text-[11px] font-semibold tracking-[0.2em] uppercase transition-transform hover:scale-[1.03] ${
+                isLight ? "bg-slate-900 text-white" : "bg-white text-black"
+              }`}
+            >
+              {cta.label}
+              <ArrowUpRight size={14} />
+            </motion.a>
           )}
         </div>
 

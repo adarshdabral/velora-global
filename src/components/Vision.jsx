@@ -39,6 +39,7 @@ const STATUS_LABEL = {
   "revealing-soon": "Revealing Soon",
   "coming-soon": "Coming Soon",
   "in-development": "In Development",
+  live: "Live",
 };
 
 function OrbitEcosystem() {
