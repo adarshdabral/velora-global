@@ -7,7 +7,7 @@ import {
   ShieldCheck,
   Infinity as InfinityIcon,
   LineChart,
-  BrainCircuit,
+  Zap,
   Vault,
   Globe2,
   Users,
@@ -27,7 +27,7 @@ const ICONS = {
   ShieldCheck,
   Infinity: InfinityIcon,
   LineChart,
-  BrainCircuit,
+  Zap,
   Vault,
   Globe2,
   Users,
@@ -196,7 +196,7 @@ export default function Vision() {
         className="pointer-events-none absolute inset-0 opacity-[0.4]"
         style={{
           background:
-            "radial-gradient(circle at 15% 20%, rgba(59,130,246,0.08), transparent 40%), radial-gradient(circle at 85% 80%, rgba(124,58,237,0.08), transparent 40%)",
+            "radial-gradient(circle at 15% 20%, rgba(59,130,246,0.08), transparent 40%), radial-gradient(circle at 85% 80%, rgba(37,99,235,0.08), transparent 40%)",
         }}
         aria-hidden="true"
       />
@@ -262,7 +262,7 @@ export default function Vision() {
 
       <p className="relative mt-20 text-center font-display text-xl font-medium text-slate-800 sm:text-2xl">
         We fund. You trade.{" "}
-        <span className="bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent">
+        <span className="bg-gradient-to-r from-blue-600 to-sky-400 bg-clip-text text-transparent">
           Together, we build the future.
         </span>
       </p>

@@ -49,11 +49,11 @@ export const ecosystemNodes = [
     status: "in-development",
   },
   {
-    id: "ai-agent",
-    productId: "ai-agent",
-    label: "AI Agent",
-    icon: "BrainCircuit",
-    blurb: "Your intelligent trading assistant for smarter decisions & risk management.",
+    id: "flash-arbitrage",
+    productId: "flash-arbitrage",
+    label: "Flash Loans & Arbitrage",
+    icon: "Zap",
+    blurb: "Automated arbitrage powered by Velswap's flash loan pools — borrow, trade and repay in a single block.",
     status: "in-development",
   },
   {

@@ -54,7 +54,7 @@ export default function ScrollProgress({ sections }) {
       </motion.div>
       <div className="relative h-40 w-px overflow-hidden bg-white/10">
         <motion.div
-          className="absolute left-0 top-0 w-full bg-gradient-to-b from-blue-400 via-violet-400 to-fuchsia-400"
+          className="absolute left-0 top-0 w-full bg-gradient-to-b from-blue-300 via-blue-500 to-blue-700"
           style={{ height: `${progress * 100}%` }}
         />
       </div>

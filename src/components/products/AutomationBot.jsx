@@ -1,10 +1,10 @@
 import { motion } from "motion/react";
-import { BrainCircuit, Bot, Copy, ShieldAlert, Crown } from "lucide-react";
+import { Cpu, Bot, Copy, ShieldAlert, Crown } from "lucide-react";
 import ProductShell from "./ProductShell";
 import { products, automationBotFeatures } from "../../data/products";
-import robot from "../../assets/images/ai-robot.webp";
+import robot from "../../assets/images/automation-robot.webp";
 
-const ICONS = { BrainCircuit, Bot, Copy, ShieldAlert, Crown };
+const ICONS = { Cpu, Bot, Copy, ShieldAlert, Crown };
 const product = products.find((p) => p.id === "automation-bot");
 
 export default function AutomationBot() {
@@ -28,8 +28,8 @@ export default function AutomationBot() {
       visual={
         <motion.img
           src={robot}
-          alt="A humanoid AI robot bearing the Velora Global infinity emblem, interacting with a trading interface"
-          className="mask-fade-edges w-full max-w-xs drop-shadow-[0_30px_70px_rgba(59,130,246,0.3)] sm:max-w-sm"
+          alt="A humanoid automation robot bearing the Velora Global infinity emblem, interacting with a trading interface"
+          className="duotone-blue mask-fade-edges w-full max-w-xs drop-shadow-[0_30px_70px_rgba(59,130,246,0.3)] sm:max-w-sm"
           loading="lazy"
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}

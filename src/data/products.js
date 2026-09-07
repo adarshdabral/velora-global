@@ -67,12 +67,11 @@ export const propFirmBenefits = [
   { title: "Trader-First Approach", blurb: "Built for traders, by traders. Transparent, fair & supportive.", icon: "Users" },
 ];
 
-export const aiAgentFeatures = [
-  { title: "Smarter Analysis", blurb: "AI-powered insights for deeper market understanding.", icon: "BrainCircuit" },
-  { title: "Better Decisions", blurb: "Real-time data. Smarter calls. Stronger outcomes.", icon: "Target" },
-  { title: "Strategy Discussions", blurb: "Collaborate with AI to refine ideas and build winning strategies.", icon: "MessagesSquare" },
-  { title: "Future Planning", blurb: "Predict trends. Anticipate moves. Stay ahead of the game.", icon: "TrendingUp" },
-  { title: "Risk Management", blurb: "Intelligent alerts. Protect capital. Trade with confidence.", icon: "ShieldAlert" },
+export const flashArbitrageFeatures = [
+  { title: "Cross-Market Scanning", blurb: "Continuously tracks price gaps for the same asset across pools and exchanges.", icon: "Radar" },
+  { title: "Zero-Capital Execution", blurb: "Funded entirely by a flash loan — no upfront capital, no balance sheet risk.", icon: "Zap" },
+  { title: "Atomic Settlement", blurb: "The loan, the trade and the repayment complete in one transaction — or none of it happens.", icon: "Lock" },
+  { title: "Runs Around the Clock", blurb: "Automated execution around the clock, without manual intervention.", icon: "RefreshCw" },
 ];
 
 export const educationFeatures = [
@@ -93,7 +92,7 @@ export const fundManagementFeatures = [
 ];
 
 export const automationBotFeatures = [
-  { title: "AI Powered Automation", blurb: "Advanced AI algorithms analyze markets in real-time to identify high probability opportunities.", icon: "BrainCircuit" },
+  { title: "Algorithmic Automation", blurb: "Rule-based strategies scan markets in real-time to identify high probability setups.", icon: "Cpu" },
   { title: "License Bot Access", blurb: "Get licensed access to professional trading bots built for consistency, accuracy and performance.", icon: "Bot" },
   { title: "Copy Trading Program", blurb: "Seamlessly copy top performing traders and strategies with full transparency and control.", icon: "Copy" },
   { title: "Smart Risk Management", blurb: "Built-in risk management, stop loss protection and real-time monitoring to safeguard your capital.", icon: "ShieldAlert" },
@@ -123,7 +122,7 @@ export const products = [
     tagline: "Powering Traders. Driving Markets. Building the Future.",
     status: "Revealing Soon",
     theme: "dark",
-    accent: "from-blue-500 to-violet-500",
+    accent: "from-blue-500 to-blue-700",
     description:
       "A broker house acts as the bridge between traders and the financial markets — providing access to trading platforms, liquidity, execution and advanced tools for seamless, transparent participation.",
     closing: "We are building a Hybrid Broker — the best of both worlds. Technology + Trust + Flexibility + Security + Innovation + Execution.",
@@ -151,7 +150,7 @@ export const products = [
     tagline: "Borrow any pool. Settle same block.",
     status: "Live",
     theme: "dark",
-    accent: "from-violet-500 to-fuchsia-500",
+    accent: "from-blue-500 to-cyan-400",
     description:
       "Velora's cross-chain flash loan liquidity protocol. Each pool holds a single asset, lends against it within one atomic transaction, and pays depositors a pro-rata share of every fee it collects — non-custodial, on-chain, and fully auditable.",
     closing: "No hidden fees. Non-custodial. Multi-chain.",
@@ -159,18 +158,18 @@ export const products = [
     externalUrl: "https://velswap.vercel.app",
   },
   {
-    id: "ai-agent",
+    id: "flash-arbitrage",
     number: "04",
     eyebrow: "Introducing",
-    title: "Velora\nAI Agent",
-    tagline: "Your Intelligent Partner in Trading & Markets.",
+    title: "Flash Loans\n& Arbitrage",
+    tagline: "Borrow. Trade. Profit. All In One Block.",
     status: "In Development",
     theme: "dark",
-    accent: "from-indigo-400 to-purple-500",
+    accent: "from-blue-400 to-blue-600",
     description:
-      "Think. Analyze. Decide. Evolve. The Velora AI Agent brings AI-powered precision, real-time insights and automated execution to every decision you make.",
-    closing: "Real-time insights. AI-powered precision. Endless possibilities.",
-    image: "ai-brain",
+      "An automated arbitrage engine built on Velswap's flash loan pools — it borrows liquidity, captures the price gap between two markets, and repays the loan inside a single transaction. No upfront capital, no overnight exposure.",
+    closing: "Zero capital. Zero exposure. Pure execution.",
+    image: null,
   },
   {
     id: "education",
@@ -180,7 +179,7 @@ export const products = [
     tagline: "Learn. Trade. Grow.",
     status: "Live Soon",
     theme: "light",
-    accent: "from-blue-500 to-violet-500",
+    accent: "from-blue-500 to-blue-700",
     description:
       "Your ultimate destination to learn, grow and master the art of trading with Velora Global — from first principles to advanced strategy.",
     closing: "Together with Velora Global.",
@@ -194,7 +193,7 @@ export const products = [
     tagline: "Exclusive. Global. Limitless.",
     status: "Coming Soon",
     theme: "dark",
-    accent: "from-violet-400 to-blue-500",
+    accent: "from-sky-400 to-blue-500",
     description:
       "Smart global payments and seamless financial management on the go — carried on a card built for a borderless life.",
     closing: "Coming soon, in three finishes.",
@@ -208,7 +207,7 @@ export const products = [
     tagline: "Expertise You Trust. Growth You Deserve.",
     status: "Bots & Strategies Live Soon",
     theme: "light",
-    accent: "from-blue-500 to-purple-500",
+    accent: "from-blue-500 to-blue-700",
     description:
       "Elite fund management solutions for top leaders who seek consistent growth, security and unmatched performance — professionals manage, so you can focus on leading.",
     closing: "Your growth. Our expertise. Limitless possibilities.",
@@ -218,14 +217,14 @@ export const products = [
     id: "automation-bot",
     number: "08",
     eyebrow: "Velora Global",
-    title: "AI Automation\nLicense Bot",
-    tagline: "Intelligence That Trades. Automation That Delivers.",
+    title: "Automation\nLicense Bot",
+    tagline: "Automation That Delivers. Consistency That Compounds.",
     status: "Exclusive for Top Leaders",
     theme: "dark",
-    accent: "from-blue-400 to-indigo-500",
+    accent: "from-blue-400 to-blue-700",
     description:
-      "Intelligent trading solutions, licensed copy trading access, and fully automated strategies — built for consistency, accuracy and growth.",
+      "Automated trading solutions, licensed copy trading access, and fully automated strategies — built for consistency, accuracy and growth.",
     closing: "Automate. Copy. Grow. The future of trading is here.",
-    image: "ai-robot",
+    image: "automation-robot",
   },
 ];

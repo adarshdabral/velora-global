@@ -14,7 +14,7 @@ export default function FinalCTA() {
       <img
         src={travelBg}
         alt=""
-        className="absolute inset-0 h-full w-full object-cover opacity-40"
+        className="duotone-blue absolute inset-0 h-full w-full object-cover opacity-40"
         loading="lazy"
         aria-hidden="true"
       />
@@ -65,7 +65,7 @@ export default function FinalCTA() {
         viewport={{ once: true, amount: 0.5 }}
         className="relative flex min-h-[85vh] flex-col items-center justify-center gap-6 px-6 pb-28 text-center"
       >
-        <Sparkles size={26} className="text-violet-500" />
+        <Sparkles size={26} className="text-blue-500" />
         <h2 className="max-w-3xl text-balance font-display text-4xl font-semibold sm:text-6xl">
           Something Extraordinary
           <br /> Is On The Horizon.

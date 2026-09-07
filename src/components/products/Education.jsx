@@ -18,7 +18,7 @@ export default function Education() {
           className="absolute inset-0 opacity-[0.5]"
           style={{
             background:
-              "radial-gradient(circle at 80% 10%, rgba(59,130,246,0.10), transparent 45%), radial-gradient(circle at 10% 90%, rgba(124,58,237,0.10), transparent 45%)",
+              "radial-gradient(circle at 80% 10%, rgba(59,130,246,0.10), transparent 45%), radial-gradient(circle at 10% 90%, rgba(37,99,235,0.10), transparent 45%)",
           }}
           aria-hidden="true"
         />
@@ -81,7 +81,7 @@ export default function Education() {
             viewport={{ once: true }}
             transition={{ delay: 0.8 }}
           >
-            <BookOpen size={18} className="text-violet-600" />
+            <BookOpen size={18} className="text-blue-600" />
           </motion.div>
         </div>
       }

@@ -19,7 +19,7 @@ export default function FundManagement() {
           className="absolute inset-0 opacity-[0.5]"
           style={{
             background:
-              "radial-gradient(circle at 85% 15%, rgba(59,130,246,0.10), transparent 45%), radial-gradient(circle at 15% 85%, rgba(124,58,237,0.10), transparent 45%)",
+              "radial-gradient(circle at 85% 15%, rgba(59,130,246,0.10), transparent 45%), radial-gradient(circle at 15% 85%, rgba(37,99,235,0.10), transparent 45%)",
           }}
           aria-hidden="true"
         />
@@ -37,7 +37,7 @@ export default function FundManagement() {
               className={`w-7 rounded-t-md sm:w-9 ${
                 i % 2 === 0
                   ? "bg-gradient-to-t from-blue-600 to-blue-300"
-                  : "bg-gradient-to-t from-violet-600 to-violet-300"
+                  : "bg-gradient-to-t from-blue-700 to-blue-300"
               }`}
             />
           ))}

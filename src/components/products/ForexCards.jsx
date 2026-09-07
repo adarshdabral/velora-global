@@ -5,7 +5,7 @@ import cardsImg from "../../assets/images/forex-cards.webp";
 
 const product = products.find((p) => p.id === "forex-cards");
 const SWATCHES = [
-  "linear-gradient(135deg,#3b82f6,#7c3aed)",
+  "linear-gradient(135deg,#1d4ed8,#38bdf8)",
   "linear-gradient(135deg,#1e293b,#0f172a)",
   "linear-gradient(135deg,#e2e8f0,#f8fafc)",
 ];
@@ -20,7 +20,7 @@ export default function ForexCards() {
             className="absolute inset-0"
             style={{
               background:
-                "radial-gradient(circle at 30% 20%, rgba(124,58,237,0.16), transparent 45%), radial-gradient(circle at 80% 80%, rgba(59,130,246,0.14), transparent 50%)",
+                "radial-gradient(circle at 30% 20%, rgba(37,99,235,0.16), transparent 45%), radial-gradient(circle at 80% 80%, rgba(59,130,246,0.14), transparent 50%)",
             }}
           />
         </div>
@@ -30,7 +30,7 @@ export default function ForexCards() {
           <motion.img
             src={cardsImg}
             alt="Three Velora Global forex cards — deep blue, black and pearl white finishes — coming soon"
-            className="mask-fade-edges w-full drop-shadow-[0_30px_70px_rgba(124,58,237,0.3)]"
+            className="duotone-blue mask-fade-edges w-full drop-shadow-[0_30px_70px_rgba(37,99,235,0.3)]"
             loading="lazy"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

@@ -80,7 +80,7 @@ export default function Navbar() {
                   className="group relative text-[11px] font-medium tracking-[0.2em] text-white/70 uppercase transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-400"
                 >
                   {link.label}
-                  <span className="absolute -bottom-1 left-1/2 h-px w-0 bg-gradient-to-r from-blue-400 to-violet-400 transition-all duration-300 group-hover:left-0 group-hover:w-full" />
+                  <span className="absolute -bottom-1 left-1/2 h-px w-0 bg-gradient-to-r from-blue-400 to-sky-300 transition-all duration-300 group-hover:left-0 group-hover:w-full" />
                 </a>
               </li>
             ))}
@@ -114,7 +114,7 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
-            className="fixed inset-0 z-40 flex flex-col justify-center bg-[#05050a]/98 px-8 backdrop-blur-2xl lg:hidden"
+            className="fixed inset-0 z-40 flex flex-col justify-center bg-[#04070f]/98 px-8 backdrop-blur-2xl lg:hidden"
           >
             <nav>
               <ul className="flex flex-col gap-2">

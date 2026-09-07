@@ -3,7 +3,7 @@ import { ChevronUp, ChevronDown, ArrowUpRight } from "lucide-react";
 import { products } from "../../data/products";
 
 const THEME_BG = {
-  dark: "bg-[#05050a] text-white",
+  dark: "bg-[#04070f] text-white",
   light: "bg-gradient-to-b from-white to-[#eef2ff] text-slate-900",
 };
 

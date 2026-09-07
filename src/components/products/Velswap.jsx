@@ -20,14 +20,14 @@ export default function Velswap() {
             className="absolute left-1/2 top-1/2 h-[900px] w-[900px] -translate-x-1/2 -translate-y-1/2 rounded-full"
             style={{
               background:
-                "conic-gradient(from 0deg, rgba(168,85,247,0.14), transparent 30%, rgba(217,70,239,0.12), transparent 70%, rgba(168,85,247,0.14))",
+                "conic-gradient(from 0deg, rgba(56,189,248,0.14), transparent 30%, rgba(37,99,235,0.12), transparent 70%, rgba(56,189,248,0.14))",
             }}
             animate={{ rotate: 360 }}
             transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
           />
           <div
             className="absolute inset-0"
-            style={{ background: "radial-gradient(circle at 50% 50%, transparent 20%, #05050a 75%)" }}
+            style={{ background: "radial-gradient(circle at 50% 50%, transparent 20%, #04070f 75%)" }}
           />
         </div>
       }
@@ -53,7 +53,7 @@ export default function Velswap() {
                 className="flex items-center justify-between py-3"
               >
                 <div className="flex items-center gap-2">
-                  <span className="h-2 w-2 rounded-full bg-gradient-to-br from-violet-400 to-fuchsia-400" />
+                  <span className="h-2 w-2 rounded-full bg-gradient-to-br from-blue-400 to-cyan-400" />
                   <span className="text-sm font-semibold text-white">{pool.asset}</span>
                   <span className="text-xs text-white/40">{pool.rate} fee</span>
                 </div>

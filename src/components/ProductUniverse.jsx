@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import BrokerHouse from "./products/BrokerHouse";
 import PropFund from "./products/PropFund";
 import Velswap from "./products/Velswap";
-import AIAgent from "./products/AIAgent";
+import FlashArbitrage from "./products/FlashArbitrage";
 import Education from "./products/Education";
 import ForexCards from "./products/ForexCards";
 import FundManagement from "./products/FundManagement";
@@ -10,8 +10,8 @@ import AutomationBot from "./products/AutomationBot";
 
 export default function ProductUniverse() {
   return (
-    <div id="products" className="relative scroll-mt-24 bg-[#05050a]">
-      <div className="relative flex h-[40vh] flex-col items-center justify-center bg-[#05050a] px-6 text-center sm:h-[50vh]">
+    <div id="products" className="relative scroll-mt-24 bg-[#04070f]">
+      <div className="relative flex h-[40vh] flex-col items-center justify-center bg-[#04070f] px-6 text-center sm:h-[50vh]">
         <p className="text-[11px] font-semibold tracking-[0.4em] text-blue-300/80 uppercase">
           The Product Universe
         </p>
@@ -29,7 +29,7 @@ export default function ProductUniverse() {
       <BrokerHouse />
       <PropFund />
       <Velswap />
-      <AIAgent />
+      <FlashArbitrage />
       <Education />
       <ForexCards />
       <FundManagement />

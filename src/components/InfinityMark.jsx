@@ -36,9 +36,9 @@ export default function InfinityMark({
         >
           <defs>
             <linearGradient id={glowId} x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#3b82f6" />
-              <stop offset="50%" stopColor="#7c3aed" />
-              <stop offset="100%" stopColor="#a855f7" />
+              <stop offset="0%" stopColor="#38bdf8" />
+              <stop offset="50%" stopColor="#3b82f6" />
+              <stop offset="100%" stopColor="#1d4ed8" />
             </linearGradient>
           </defs>
           <path d={INFINITY_PATH} fill={`url(#${glowId})`} />
@@ -51,10 +51,10 @@ export default function InfinityMark({
       >
         <defs>
           <linearGradient id={gradId} x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#60a5fa" />
+            <stop offset="0%" stopColor="#7dd3fc" />
             <stop offset="45%" stopColor="#3b82f6" />
-            <stop offset="65%" stopColor="#7c3aed" />
-            <stop offset="100%" stopColor="#c084fc" />
+            <stop offset="65%" stopColor="#2563eb" />
+            <stop offset="100%" stopColor="#1e40af" />
           </linearGradient>
         </defs>
         <path d={INFINITY_PATH} fill={`url(#${gradId})`} />

@@ -23,7 +23,7 @@ const SECTIONS = [
 
 export default function App() {
   return (
-    <div className="relative bg-[#05050a] font-sans text-white antialiased selection:bg-violet-500/30">
+    <div className="relative bg-[#04070f] font-sans text-white antialiased selection:bg-blue-500/30">
       <Cursor />
       <NoiseOverlay />
       <ScrollProgress sections={SECTIONS} />

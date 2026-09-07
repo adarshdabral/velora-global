@@ -36,7 +36,7 @@ export default function PropFund() {
           <motion.img
             src={propVisual}
             alt="A bull statue rising in front of a glowing digital globe and ascending growth bars"
-            className="mask-fade-edges w-full drop-shadow-[0_30px_70px_rgba(34,211,238,0.25)]"
+            className="duotone-blue mask-fade-edges w-full drop-shadow-[0_30px_70px_rgba(34,211,238,0.25)]"
             loading="lazy"
             animate={{ y: [0, -14, 0] }}
             transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}

@@ -17,7 +17,10 @@ export default function CoreTeam() {
     offset: ["start 0.9", "start 0.15"],
   });
   const brightness = useTransform(scrollYProgress, [0, 1], [0.4, 1.15]);
-  const filter = useTransform(brightness, (b) => `brightness(${b}) saturate(1.1)`);
+  const filter = useTransform(
+    brightness,
+    (b) => `grayscale(1) sepia(1) hue-rotate(180deg) saturate(3.5) brightness(${b}) contrast(1.05)`
+  );
   const opacity = useTransform(scrollYProgress, [0, 1], [0.35, 1]);
   const scale = useTransform(scrollYProgress, [0, 1], [1.06, 1]);
   const infinityOpacity = useTransform(scrollYProgress, [0.5, 1], [0, 1]);
@@ -26,7 +29,7 @@ export default function CoreTeam() {
     <section
       id="team"
       ref={ref}
-      className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-[#05050a] px-6 py-28 text-center"
+      className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-[#04070f] px-6 py-28 text-center"
     >
       <div
         className="pointer-events-none absolute inset-0"

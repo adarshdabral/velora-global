@@ -31,7 +31,7 @@ export default function BrokerHouse() {
             className="absolute inset-0"
             style={{
               background:
-                "radial-gradient(circle at 20% 20%, rgba(59,130,246,0.16), transparent 45%), radial-gradient(circle at 85% 70%, rgba(124,58,237,0.16), transparent 50%)",
+                "radial-gradient(circle at 20% 20%, rgba(59,130,246,0.16), transparent 45%), radial-gradient(circle at 85% 70%, rgba(37,99,235,0.16), transparent 50%)",
             }}
           />
         </div>
@@ -48,7 +48,7 @@ export default function BrokerHouse() {
             <img
               src={brokerPhone}
               alt="Velora Broker House concept on a mobile interface, marked Revealing Soon"
-              className="mask-fade-edges w-full drop-shadow-[0_30px_60px_rgba(59,130,246,0.25)]"
+              className="duotone-blue mask-fade-edges w-full drop-shadow-[0_30px_60px_rgba(59,130,246,0.25)]"
               loading="lazy"
             />
           </motion.div>

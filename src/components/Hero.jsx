@@ -70,7 +70,7 @@ export default function Hero() {
     >
       <div
         ref={parallaxRef}
-        className="sticky top-0 h-screen w-full overflow-hidden bg-[#05050a]"
+        className="sticky top-0 h-screen w-full overflow-hidden bg-[#04070f]"
       >
         {/* Atmospheric background image, sourced from the Velora launch deck */}
         <motion.div
@@ -81,16 +81,16 @@ export default function Hero() {
           <img
             src={heroBg}
             alt=""
-            className="h-full w-full object-cover opacity-[0.32]"
+            className="duotone-blue h-full w-full object-cover opacity-[0.32]"
             loading="eager"
             fetchPriority="high"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#05050a] via-[#05050a]/70 to-[#05050a]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#04070f] via-[#04070f]/70 to-[#04070f]" />
           <div
             className="absolute inset-0"
             style={{
               background:
-                "radial-gradient(circle at 50% 30%, rgba(99,102,241,0.22), transparent 45%), radial-gradient(circle at 80% 75%, rgba(124,58,237,0.16), transparent 50%)",
+                "radial-gradient(circle at 50% 30%, rgba(59,130,246,0.22), transparent 45%), radial-gradient(circle at 80% 75%, rgba(37,99,235,0.16), transparent 50%)",
             }}
           />
         </motion.div>
@@ -114,7 +114,7 @@ export default function Hero() {
 
         {/* Vignette that deepens as we scroll into the portal transition */}
         <motion.div
-          className="pointer-events-none absolute inset-0 bg-[#05050a]"
+          className="pointer-events-none absolute inset-0 bg-[#04070f]"
           style={{ opacity: vignette }}
           aria-hidden="true"
         />
@@ -129,7 +129,7 @@ export default function Hero() {
             className="relative flex items-center justify-center"
           >
             <div className="absolute h-[280px] w-[280px] rounded-full border border-blue-400/20 animate-spin-slow md:h-[420px] md:w-[420px]" />
-            <div className="absolute h-[340px] w-[340px] rounded-full border border-violet-400/15 animate-spin-slower md:h-[520px] md:w-[520px]" />
+            <div className="absolute h-[340px] w-[340px] rounded-full border border-sky-400/15 animate-spin-slower md:h-[520px] md:w-[520px]" />
             <InfinityMark size={220} pulse className="md:hidden" />
             <InfinityMark size={340} pulse className="hidden md:block" />
           </motion.div>
@@ -155,7 +155,7 @@ export default function Hero() {
                   animate="visible"
                   className={`block leading-[0.88] tracking-[-0.03em] ${
                     i === HEADLINE.length - 1
-                      ? "bg-gradient-to-r from-blue-300 via-violet-300 to-fuchsia-300 bg-clip-text text-transparent"
+                      ? "bg-gradient-to-r from-blue-300 via-sky-300 to-cyan-300 bg-clip-text text-transparent"
                       : ""
                   }`}
                   style={{ fontSize: "clamp(2.75rem, 9vw, 8.5rem)" }}

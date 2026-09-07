@@ -4,12 +4,11 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Cormorant Garamond", "Inter", serif;
 
-  --color-space: #05050a;
-  --color-space-soft: #0a0a16;
+  --color-space: #04070f;
+  --color-space-soft: #0a1628;
   --color-velora-blue: #2563eb;
   --color-electric: #3b82f6;
-  --color-violet: #7c3aed;
-  --color-magenta: #a855f7;
+  --color-skyglow: #38bdf8;
   --color-cyan: #22d3ee;
   --color-soft-white: #f8fafc;
   --color-atmos-white: #eef2ff;
@@ -104,6 +103,10 @@ body {
 .mask-fade-edges {
   -webkit-mask-image: radial-gradient(ellipse 60% 65% at 50% 50%, black 45%, transparent 82%);
   mask-image: radial-gradient(ellipse 60% 65% at 50% 50%, black 45%, transparent 82%);
+}
+
+.duotone-blue {
+  filter: grayscale(1) sepia(1) hue-rotate(180deg) saturate(3.5) brightness(0.95) contrast(1.05);
 }
 
 .mask-fade-bottom {

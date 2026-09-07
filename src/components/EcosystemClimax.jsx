@@ -3,7 +3,7 @@ import {
   CreditCard,
   Bitcoin,
   ShieldCheck,
-  BrainCircuit,
+  Zap,
   Vault,
   GraduationCap,
   Bot,
@@ -14,7 +14,7 @@ import climaxBg from "../assets/images/ecosystem-climax.webp";
 
 const CONVERGING = [
   { Icon: Landmark, label: "Broker", from: { x: -280, y: -160 } },
-  { Icon: BrainCircuit, label: "AI Agent", from: { x: 280, y: -160 } },
+  { Icon: Zap, label: "Arbitrage", from: { x: 280, y: -160 } },
   { Icon: ShieldCheck, label: "Prop Firm", from: { x: -320, y: 40 } },
   { Icon: Vault, label: "Fund Mgmt.", from: { x: 320, y: 40 } },
   { Icon: Bitcoin, label: "Crypto", from: { x: -220, y: 200 } },
@@ -32,7 +32,7 @@ export default function EcosystemClimax() {
       <img
         src={climaxBg}
         alt=""
-        className="absolute inset-0 h-full w-full object-cover opacity-70"
+        className="duotone-blue absolute inset-0 h-full w-full object-cover opacity-70"
         loading="lazy"
         aria-hidden="true"
       />
