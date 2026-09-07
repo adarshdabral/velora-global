@@ -4,7 +4,7 @@ import ProductShell from "./ProductShell";
 import { products, velswapFeatures, velswapPools } from "../../data/products";
 
 const ICONS = { Wallet, Zap, Percent, Eye };
-const product = products.find((p) => p.id === "crypto-arbitrage");
+const product = products.find((p) => p.id === "velswap");
 
 export default function Velswap() {
   const features = velswapFeatures.map((f) => ({ ...f, Icon: ICONS[f.icon] }));

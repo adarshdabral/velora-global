@@ -1,12 +1,12 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
-import { ArrowRight, ChevronDown, Euro, DollarSign, Bitcoin } from "lucide-react";
+import { ArrowRight, ChevronDown, Bitcoin, Coins, Waves } from "lucide-react";
 import InfinityMark from "./InfinityMark";
 import { useTypewriter } from "../hooks/useTypewriter";
 import { useMouseParallax } from "../hooks/useMouseParallax";
 import heroBg from "../assets/images/hero-bg.webp";
 
-const HEADLINE = ["THE FUTURE", "OF FINANCE", "IS AN", "ECOSYSTEM."];
+const HEADLINE = ["FIND THE SPREAD.", "BORROW THE LIQUIDITY.", "CAPTURE THE OPPORTUNITY."];
 
 const lineVariants = {
   hidden: { y: "110%" },
@@ -41,7 +41,7 @@ function FloatingOrb({ icon: Icon, color, top, left, delay, size = 44 }) {
 export default function Hero() {
   const heroRef = useRef(null);
   const parallaxRef = useRef(null);
-  const { displayed, done } = useTypewriter("WELCOME TO VELORA GLOBAL", 34, 500);
+  const { displayed, done } = useTypewriter("FLASHLOANS × DEFI ARBITRAGE", 34, 500);
   const { x, y } = useMouseParallax(parallaxRef);
 
   const { scrollYProgress } = useScroll({
@@ -72,7 +72,7 @@ export default function Hero() {
         ref={parallaxRef}
         className="sticky top-0 h-screen w-full overflow-hidden bg-[#04070f]"
       >
-        {/* Atmospheric background image, sourced from the Velora launch deck */}
+        {/* Atmospheric background */}
         <motion.div
           className="absolute inset-0"
           style={{ opacity: bgOpacity }}
@@ -106,11 +106,11 @@ export default function Hero() {
           aria-hidden="true"
         />
 
-        {/* Floating currency orbs, echoing the deck's floating coin motif */}
-        <FloatingOrb icon={Euro} color="#60a5fa" top="22%" left="10%" delay={0} />
-        <FloatingOrb icon={DollarSign} color="#a78bfa" top="65%" left="14%" delay={1.2} size={38} />
-        <FloatingOrb icon={Bitcoin} color="#f0b90b" top="30%" left="88%" delay={0.6} />
-        <FloatingOrb icon={DollarSign} color="#22d3ee" top="70%" left="85%" delay={1.8} size={36} />
+        {/* Floating crypto-native orbs */}
+        <FloatingOrb icon={Bitcoin} color="#f0b90b" top="22%" left="10%" delay={0} />
+        <FloatingOrb icon={Coins} color="#60a5fa" top="65%" left="14%" delay={1.2} size={38} />
+        <FloatingOrb icon={Bitcoin} color="#38bdf8" top="30%" left="88%" delay={0.6} />
+        <FloatingOrb icon={Waves} color="#22d3ee" top="70%" left="85%" delay={1.8} size={36} />
 
         {/* Vignette that deepens as we scroll into the portal transition */}
         <motion.div
@@ -158,7 +158,7 @@ export default function Hero() {
                       ? "bg-gradient-to-r from-blue-300 via-sky-300 to-cyan-300 bg-clip-text text-transparent"
                       : ""
                   }`}
-                  style={{ fontSize: "clamp(2.75rem, 9vw, 8.5rem)" }}
+                  style={{ fontSize: "clamp(2rem, 6.6vw, 6.2rem)" }}
                 >
                   {line}
                 </motion.span>
@@ -172,9 +172,9 @@ export default function Hero() {
             transition={{ delay: 1.1, duration: 0.8 }}
             className="mt-8 flex items-center gap-3 text-[11px] font-medium tracking-[0.3em] text-white/60 uppercase"
           >
-            <span>Infinite Opportunities.</span>
+            <span>Flashloans.</span>
             <InfinityMark size={26} glow={false} />
-            <span>Limitless Wealth.</span>
+            <span>Arbitrage.</span>
           </motion.div>
 
           <motion.div
@@ -184,27 +184,25 @@ export default function Hero() {
             className="mt-10 flex flex-wrap items-center justify-center gap-4"
           >
             <a
-              href="#ecosystem"
+              href="https://velswap.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
               data-cursor="cta"
-              onClick={(e) => {
-                e.preventDefault();
-                document.querySelector("#ecosystem")?.scrollIntoView({ behavior: "smooth" });
-              }}
               className="group flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-[12px] font-semibold tracking-[0.15em] text-black uppercase transition-transform hover:scale-[1.03]"
             >
-              Enter the Ecosystem
+              Explore VelSwap
               <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" />
             </a>
             <a
-              href="#roadmap"
+              href="#how-it-works"
               data-cursor="explore"
               onClick={(e) => {
                 e.preventDefault();
-                document.querySelector("#roadmap")?.scrollIntoView({ behavior: "smooth" });
+                document.querySelector("#how-it-works")?.scrollIntoView({ behavior: "smooth" });
               }}
               className="rounded-full border border-white/20 px-7 py-3.5 text-[12px] font-semibold tracking-[0.15em] text-white/90 uppercase transition-colors hover:border-white/50"
             >
-              Follow the Roadmap
+              See How It Works
             </a>
           </motion.div>
         </motion.div>

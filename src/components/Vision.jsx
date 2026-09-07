@@ -1,45 +1,30 @@
 import { useRef, useState } from "react";
 import { motion, useTransform } from "motion/react";
 import {
-  Landmark,
-  CreditCard,
-  Bitcoin,
-  ShieldCheck,
-  Infinity as InfinityIcon,
-  LineChart,
   Zap,
-  Vault,
-  Globe2,
-  Users,
-  Cpu,
-  Handshake,
+  Waves,
+  ArrowLeftRight,
+  Bitcoin,
+  Coins,
+  FileCode2,
+  Lock,
+  ShieldCheck,
   ArrowRight,
 } from "lucide-react";
 import InfinityMark from "./InfinityMark";
-import { ecosystemNodes, marketStats, pillars } from "../data/ecosystem";
+import { ecosystemNodes } from "../data/ecosystem";
 import { products } from "../data/products";
 import { useMouseParallax } from "../hooks/useMouseParallax";
 
 const ICONS = {
-  Landmark,
-  CreditCard,
-  Bitcoin,
-  ShieldCheck,
-  Infinity: InfinityIcon,
-  LineChart,
   Zap,
-  Vault,
-  Globe2,
-  Users,
-  Cpu,
-  Handshake,
-};
-
-const STATUS_LABEL = {
-  "revealing-soon": "Revealing Soon",
-  "coming-soon": "Coming Soon",
-  "in-development": "In Development",
-  live: "Live",
+  Waves,
+  ArrowLeftRight,
+  Bitcoin,
+  Coins,
+  FileCode2,
+  Lock,
+  ShieldCheck,
 };
 
 function OrbitEcosystem() {
@@ -96,7 +81,7 @@ function OrbitEcosystem() {
             <defs>
               <linearGradient id="velora-orbit-grad" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" stopColor="#3b82f6" />
-                <stop offset="100%" stopColor="#a855f7" />
+                <stop offset="100%" stopColor="#38bdf8" />
               </linearGradient>
             </defs>
           </svg>
@@ -149,9 +134,8 @@ function OrbitEcosystem() {
           <div className="flex flex-col items-center rounded-full bg-white/70 p-8 shadow-[0_0_60px_rgba(59,130,246,0.15)] backdrop-blur-md sm:p-10">
             <InfinityMark size={72} />
             <span className="mt-1 text-[10px] font-semibold tracking-[0.3em] text-slate-900">
-              VELORA
+              VELSWAP
             </span>
-            <span className="text-[8px] font-medium tracking-[0.3em] text-slate-500">GLOBAL</span>
           </div>
         </div>
       </motion.div>
@@ -164,10 +148,7 @@ function OrbitEcosystem() {
         transition={{ duration: 0.4 }}
         className="mt-10 flex w-full max-w-md flex-col items-center text-center"
       >
-        <span className="rounded-full border border-slate-900/10 bg-white px-3 py-1 text-[9px] font-semibold tracking-[0.25em] text-slate-500 uppercase">
-          {STATUS_LABEL[activeNode.status]}
-        </span>
-        <h3 className="mt-4 font-display text-3xl font-semibold text-slate-900">
+        <h3 className="font-display text-3xl font-semibold text-slate-900">
           {activeNode.label}
         </h3>
         <p className="mt-2 text-sm leading-relaxed text-slate-500">{activeNode.blurb}</p>
@@ -178,7 +159,8 @@ function OrbitEcosystem() {
             onClick={() => goToProduct(activeNode.productId)}
             className="mt-4 flex items-center gap-1.5 text-[11px] font-semibold tracking-[0.2em] text-blue-600 uppercase"
           >
-            Explore {activeProduct.eyebrow} <ArrowRight size={13} />
+            {activeProduct.eyebrow === "By Velora Global" ? "Explore VelSwap" : `Explore ${activeProduct.title}`}{" "}
+            <ArrowRight size={13} />
           </button>
         )}
       </motion.div>
@@ -189,7 +171,7 @@ function OrbitEcosystem() {
 export default function Vision() {
   return (
     <section
-      id="vision"
+      id="opportunity"
       className="relative overflow-hidden bg-gradient-to-b from-[#f8fafc] via-white to-[#eef2ff] px-6 py-28 text-slate-900 sm:py-36"
     >
       <div
@@ -201,71 +183,25 @@ export default function Vision() {
         aria-hidden="true"
       />
 
-      <div className="relative mx-auto max-w-3xl text-center">
+      <div className="relative mx-auto max-w-2xl text-center">
         <p className="text-[11px] font-semibold tracking-[0.4em] text-blue-600 uppercase">
-          The Vision of Velora Global
+          The Opportunity
         </p>
-        <h2 className="mt-5 font-display text-5xl font-semibold tracking-tight text-slate-900 sm:text-6xl">
-          One Ecosystem.
-          <br />
-          Endless Possibilities.
+        <h2 className="mt-5 font-display text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
+          DeFi Markets Don't Always Agree On Price.
         </h2>
         <p className="mx-auto mt-6 max-w-xl text-balance text-base leading-relaxed text-slate-500">
-          To build the complete financial ecosystem that empowers traders, investors, and
-          dreamers — step by step.
+          Liquidity is fragmented across dozens of decentralized exchanges. The same asset can
+          trade at slightly different prices in different places, at the same time — and that
+          gap is where arbitrage opportunity lives. Traditional arbitrage usually requires deep
+          capital reserves. A flashloan changes that equation: temporary liquidity, borrowed and
+          repaid inside a single transaction, without committing the full trade capital upfront.
         </p>
       </div>
 
       <div id="ecosystem" className="relative mt-20 scroll-mt-24">
         <OrbitEcosystem />
       </div>
-
-      <div className="relative mx-auto mt-28 max-w-5xl">
-        <p className="text-center text-[11px] font-semibold tracking-[0.4em] text-slate-400 uppercase">
-          The World of Trading — Opportunity Like Never Before
-        </p>
-        <div className="mt-10 grid gap-px overflow-hidden rounded-2xl border border-slate-900/10 bg-slate-900/10 sm:grid-cols-3">
-          {marketStats.map((stat) => {
-            const Icon = ICONS[stat.icon];
-            return (
-              <div key={stat.id} className="bg-white p-8 text-center sm:p-10">
-                <Icon size={22} className="mx-auto mb-4 text-blue-600" strokeWidth={1.6} />
-                <p className="text-sm font-semibold text-slate-900">{stat.label}</p>
-                <p className="mt-1 text-xs text-slate-400">{stat.tag}</p>
-                <p className="mt-5 font-display text-4xl font-semibold text-slate-900">
-                  {stat.value}
-                  <span className="ml-1 text-lg text-slate-400">{stat.unit}</span>
-                </p>
-                <p className="mt-1 text-[10px] font-medium tracking-[0.25em] text-slate-400 uppercase">
-                  {stat.sub}
-                </p>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-
-      <div className="relative mx-auto mt-20 flex max-w-5xl flex-wrap items-start justify-center gap-x-10 gap-y-8">
-        {pillars.map((p) => {
-          const Icon = ICONS[p.icon];
-          return (
-            <div key={p.label} className="flex max-w-[180px] flex-col items-center text-center">
-              <Icon size={20} className="mb-3 text-blue-600" strokeWidth={1.6} />
-              <p className="text-[11px] font-semibold tracking-[0.1em] text-slate-900 uppercase">
-                {p.label}
-              </p>
-              <p className="mt-1 text-xs leading-relaxed text-slate-500">{p.blurb}</p>
-            </div>
-          );
-        })}
-      </div>
-
-      <p className="relative mt-20 text-center font-display text-xl font-medium text-slate-800 sm:text-2xl">
-        We fund. You trade.{" "}
-        <span className="bg-gradient-to-r from-blue-600 to-sky-400 bg-clip-text text-transparent">
-          Together, we build the future.
-        </span>
-      </p>
     </section>
   );
 }

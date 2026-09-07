@@ -1,13 +1,13 @@
 import { motion } from "motion/react";
 import { Radar, Zap, Lock, RefreshCw, ArrowRight, TrendingDown, TrendingUp } from "lucide-react";
 import ProductShell from "./ProductShell";
-import { products, flashArbitrageFeatures } from "../../data/products";
+import { products, arbitrageFeatures } from "../../data/products";
 
 const ICONS = { Radar, Zap, Lock, RefreshCw };
-const product = products.find((p) => p.id === "flash-arbitrage");
+const product = products.find((p) => p.id === "arbitrage");
 
-export default function FlashArbitrage() {
-  const features = flashArbitrageFeatures.map((f) => ({ ...f, Icon: ICONS[f.icon] }));
+export default function Arbitrage() {
+  const features = arbitrageFeatures.map((f) => ({ ...f, Icon: ICONS[f.icon] }));
 
   return (
     <ProductShell
@@ -36,7 +36,7 @@ export default function FlashArbitrage() {
             >
               <TrendingDown size={18} className="mx-auto mb-2 text-blue-300" />
               <p className="text-[10px] font-semibold tracking-[0.2em] text-white/40 uppercase">
-                Pool A
+                Market A
               </p>
               <p className="mt-1 font-display text-lg text-white">Lower Price</p>
             </motion.div>
@@ -61,7 +61,7 @@ export default function FlashArbitrage() {
             >
               <TrendingUp size={18} className="mx-auto mb-2 text-cyan-300" />
               <p className="text-[10px] font-semibold tracking-[0.2em] text-white/40 uppercase">
-                Pool B
+                Market B
               </p>
               <p className="mt-1 font-display text-lg text-white">Higher Price</p>
             </motion.div>

@@ -4,10 +4,10 @@ import { Menu, X } from "lucide-react";
 import InfinityMark from "./InfinityMark";
 
 const LINKS = [
-  { label: "Ecosystem", href: "#ecosystem" },
-  { label: "Roadmap", href: "#roadmap" },
-  { label: "Products", href: "#products" },
-  { label: "Vision", href: "#vision" },
+  { label: "Opportunity", href: "#opportunity" },
+  { label: "Flashloans", href: "#product-flashloans" },
+  { label: "Arbitrage", href: "#product-arbitrage" },
+  { label: "How It Works", href: "#how-it-works" },
 ];
 
 export default function Navbar() {
@@ -59,10 +59,10 @@ export default function Navbar() {
             <InfinityMark size={34} glow={false} />
             <span className="flex flex-col leading-none">
               <span className="text-[13px] font-semibold tracking-[0.15em] text-white">
-                VELORA
+                VELSWAP
               </span>
-              <span className="text-[9px] font-medium tracking-[0.35em] text-white/50">
-                GLOBAL
+              <span className="text-[8px] font-medium tracking-[0.3em] text-white/50">
+                BY VELORA GLOBAL
               </span>
             </span>
           </a>
@@ -86,14 +86,15 @@ export default function Navbar() {
             ))}
           </ul>
 
-          <button
-            type="button"
+          <a
+            href="https://velswap.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
             data-cursor="cta"
-            onClick={() => goTo("#ecosystem")}
             className="hidden rounded-full border border-white/20 px-5 py-2 text-[11px] font-semibold tracking-[0.2em] text-white uppercase transition-all hover:border-white/60 hover:bg-white hover:text-black lg:block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-400"
           >
-            Enter
-          </button>
+            Launch App
+          </a>
 
           <button
             type="button"
@@ -118,7 +119,7 @@ export default function Navbar() {
           >
             <nav>
               <ul className="flex flex-col gap-2">
-                {[...LINKS, { label: "The Future", href: "#climax" }].map(
+                {[...LINKS, { label: "VelSwap", href: "#product-velswap" }].map(
                   (link, i) => (
                     <motion.li
                       key={link.href}
@@ -151,7 +152,7 @@ export default function Navbar() {
               transition={{ delay: 0.6 }}
               className="mt-10 text-[11px] tracking-[0.3em] text-white/40 uppercase"
             >
-              Infinite Opportunities. Limitless Wealth.
+              Flashloans. Arbitrage. On-Chain.
             </motion.p>
           </motion.div>
         )}

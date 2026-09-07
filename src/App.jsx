@@ -3,22 +3,22 @@ import NoiseOverlay from "./components/NoiseOverlay";
 import ScrollProgress from "./components/ScrollProgress";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import Roadmap from "./components/Roadmap";
 import Vision from "./components/Vision";
-import ProductUniverse from "./components/ProductUniverse";
-import CoreTeam from "./components/CoreTeam";
-import EcosystemClimax from "./components/EcosystemClimax";
+import Flashloans from "./components/products/Flashloans";
+import Arbitrage from "./components/products/Arbitrage";
+import Velswap from "./components/products/Velswap";
+import HowItWorks from "./components/HowItWorks";
 import FinalCTA from "./components/FinalCTA";
 import Footer from "./components/Footer";
 
 const SECTIONS = [
   { id: "top", label: "Intro" },
-  { id: "roadmap", label: "Roadmap" },
-  { id: "vision", label: "Vision" },
-  { id: "products", label: "Products" },
-  { id: "team", label: "Core Team" },
-  { id: "climax", label: "Ecosystem" },
-  { id: "future", label: "Bonanza" },
+  { id: "opportunity", label: "Opportunity" },
+  { id: "product-flashloans", label: "Flashloans" },
+  { id: "product-arbitrage", label: "Arbitrage" },
+  { id: "product-velswap", label: "VelSwap" },
+  { id: "how-it-works", label: "How It Works" },
+  { id: "future", label: "Closing" },
 ];
 
 export default function App() {
@@ -31,11 +31,11 @@ export default function App() {
 
       <main>
         <Hero />
-        <Roadmap />
         <Vision />
-        <ProductUniverse />
-        <CoreTeam />
-        <EcosystemClimax />
+        <Flashloans />
+        <Arbitrage />
+        <Velswap />
+        <HowItWorks />
         <FinalCTA />
       </main>
 

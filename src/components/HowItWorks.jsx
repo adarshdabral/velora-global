@@ -1,17 +1,17 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
-import { Rocket, TrendingUp, Globe2, Handshake, Gem } from "lucide-react";
-import { roadmap } from "../data/roadmap";
+import { Radar, ArrowLeftRight, Zap, Repeat, RotateCcw, Coins } from "lucide-react";
+import { howItWorks } from "../data/howItWorks";
 import { useIsDesktop } from "../hooks/useMediaQuery";
-import roadmapBg from "../assets/images/roadmap-bg.webp";
 
-const ICONS = { Rocket, TrendingUp, Globe2, Handshake, Gem };
+const ICONS = { Radar, ArrowLeftRight, Zap, Repeat, RotateCcw, Coins };
 
 const STAGE_GLOW = [
   "rgba(59,130,246,0.35)",
   "rgba(56,189,248,0.32)",
   "rgba(37,99,235,0.32)",
   "rgba(29,78,216,0.32)",
+  "rgba(56,189,248,0.32)",
   "rgba(147,197,253,0.35)",
 ];
 
@@ -42,7 +42,7 @@ function Milestone({ item, i }) {
           <Icon size={30} className="text-white" strokeWidth={1.6} />
         </div>
         <p className="mb-3 text-[11px] font-medium tracking-[0.4em] text-white/50 uppercase">
-          Stage {item.index}
+          Step {item.index}
         </p>
         <h3 className="font-display text-6xl font-semibold tracking-tight text-white uppercase sm:text-7xl md:text-8xl">
           {item.title}
@@ -58,10 +58,10 @@ function Milestone({ item, i }) {
   );
 }
 
-function DesktopRoadmap() {
+function DesktopFlow() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end end"] });
-  const n = roadmap.length;
+  const n = howItWorks.length;
   const trackX = useTransform(scrollYProgress, [0, 1], ["0%", `-${(n - 1) * 100}%`]);
   const railWidth = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
@@ -69,12 +69,12 @@ function DesktopRoadmap() {
     <div ref={ref} style={{ height: `${n * 100}vh` }} className="relative bg-[#04070f]">
       <div className="sticky top-0 h-screen w-screen overflow-hidden">
         <motion.div className="flex h-full" style={{ x: trackX }}>
-          {roadmap.map((item, i) => (
+          {howItWorks.map((item, i) => (
             <Milestone item={item} i={i} key={item.id} />
           ))}
         </motion.div>
 
-        {/* Persistent progress rail with stage nodes */}
+        {/* Persistent progress rail with step nodes */}
         <div className="pointer-events-none absolute inset-x-0 bottom-16 flex justify-center px-10">
           <div className="relative h-px w-full max-w-4xl bg-white/10">
             <motion.div
@@ -82,7 +82,7 @@ function DesktopRoadmap() {
               style={{ width: railWidth }}
             />
             <div className="absolute inset-0 flex items-center justify-between">
-              {roadmap.map((item) => (
+              {howItWorks.map((item) => (
                 <div key={item.id} className="relative flex flex-col items-center">
                   <span className="h-2.5 w-2.5 rounded-full border border-white/40 bg-[#04070f]" />
                   <span className="absolute top-4 hidden text-[9px] tracking-[0.2em] text-white/40 uppercase md:block">
@@ -98,12 +98,12 @@ function DesktopRoadmap() {
   );
 }
 
-function MobileRoadmap() {
+function MobileFlow() {
   return (
     <div className="relative bg-[#04070f] px-6 py-24">
       <div className="absolute left-[38px] top-24 bottom-24 w-px bg-gradient-to-b from-blue-300/60 via-blue-500/60 to-blue-700/60" />
       <div className="flex flex-col gap-16">
-        {roadmap.map((item, i) => {
+        {howItWorks.map((item, i) => {
           const Icon = ICONS[item.icon];
           return (
             <motion.div
@@ -122,7 +122,7 @@ function MobileRoadmap() {
               </div>
               <div className="pt-2">
                 <p className="text-[10px] font-medium tracking-[0.3em] text-white/40 uppercase">
-                  Stage {item.index}
+                  Step {item.index}
                 </p>
                 <h3 className="mt-1 font-display text-3xl font-semibold text-white uppercase">
                   {item.title}
@@ -140,26 +140,21 @@ function MobileRoadmap() {
   );
 }
 
-export default function Roadmap() {
+export default function HowItWorks() {
   const isDesktop = useIsDesktop();
 
   return (
-    <section id="roadmap" aria-label="Roadmap of Velora Global" className="relative">
+    <section id="how-it-works" aria-label="How VelSwap's arbitrage flow works" className="relative">
       <div className="relative z-10 pt-28 text-center">
-        <img
-          src={roadmapBg}
-          alt=""
-          className="duotone-blue pointer-events-none absolute inset-x-0 top-0 -z-10 h-[60vh] w-full object-cover opacity-[0.15]"
-          loading="lazy"
-        />
         <p className="text-[11px] font-medium tracking-[0.4em] text-blue-300/80 uppercase">
-          The Journey Ahead
+          How It Works
         </p>
         <h2 className="mt-4 font-display text-5xl font-semibold text-white uppercase sm:text-6xl">
-          Roadmap of Velora Global
+          Scan. Identify. Borrow.
+          <br className="hidden sm:block" /> Swap. Repay. Capture.
         </h2>
       </div>
-      {isDesktop ? <DesktopRoadmap /> : <MobileRoadmap />}
+      {isDesktop ? <DesktopFlow /> : <MobileFlow />}
     </section>
   );
 }

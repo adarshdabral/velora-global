@@ -8,16 +8,16 @@ export default function Footer() {
           <InfinityMark size={28} glow={false} />
           <div className="flex flex-col leading-none">
             <span className="text-[12px] font-semibold tracking-[0.15em] text-white">
-              VELORA
+              VELSWAP
             </span>
             <span className="text-[8px] font-medium tracking-[0.35em] text-white/40">
-              GLOBAL
+              BY VELORA GLOBAL
             </span>
           </div>
         </div>
 
         <p className="text-[11px] tracking-[0.2em] uppercase">
-          Infinite Opportunities. Limitless Wealth.
+          Flashloans. Arbitrage. On-Chain.
         </p>
 
         <p className="text-[11px] text-white/30">
